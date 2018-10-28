@@ -139,7 +139,6 @@ Set environment variables:
 ```bash
 source .scripts/set-env-variables.sh
 ```
-That is ...
 
 ### STEP 3 - Run Spring TODO App locally
 
