@@ -1,0 +1,6 @@
+[submodule "complete/spring-todo-app"]
+	path = complete/spring-todo-app
+	url = https://github.com/Microsoft/spring-todo-app.git
+[submodule "initial/spring-todo-app"]
+	path = initial/spring-todo-app
+	url = https://github.com/Microsoft/spring-todo-app.git
