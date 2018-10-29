@@ -313,7 +313,7 @@ When you are finished, you can check your results
 against YOUR code in 
 [e2e-java-experience-in-app-service-linux-part-2/complete](https://github.com/Azure-Samples/e2e-java-experience-in-app-service-linux-part-2/tree/master/complete).
 
-## Scale out the Pet Clinic App
+## Scale out the Spring TODO App
 
 Scale out Java Web app using Azure CLI:
 
