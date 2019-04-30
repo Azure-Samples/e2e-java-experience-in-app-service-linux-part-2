@@ -173,8 +173,7 @@ You can access Spring TODO App here: [http://localhost:8080/](http://localhost:8
 
 ### Step 4 - Configure for Cloud Deployment
 
-Add [Maven Plugin for Azure App Service](https://github.com/Microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md) configuration to POM.xml and deploy
-Spring TODO App to Java SE in App Service Linux:
+Ensure that the [Maven Plugin for Azure App Service](https://github.com/Microsoft/azure-maven-plugins/blob/develop/azure-webapp-maven-plugin/README.md) configuration is present and set to the latest version in the POM.xml file. 
 
 ```xml    
 <plugins> 
@@ -186,7 +185,7 @@ Spring TODO App to Java SE in App Service Linux:
     <plugin>
         <groupId>com.microsoft.azure</groupId>
             <artifactId>azure-webapp-maven-plugin</artifactId>
-            <version>1.4.0</version>
+            <version>1.6.0</version>
             <configuration>
             <deploymentType>jar</deploymentType>
             
@@ -235,7 +234,7 @@ bash-3.2$ mvn azure-webapp:deploy
 [INFO] Building spring-todo-app 2.0-SNAPSHOT
 [INFO] ------------------------------------------------------------------------
 [INFO] 
-[INFO] --- azure-webapp-maven-plugin:1.4.0:deploy (default-cli) @ spring-todo-app ---
+[INFO] --- azure-webapp-maven-plugin:1.6.0:deploy (default-cli) @ spring-todo-app ---
 [INFO] Authenticate with Azure CLI 2.0
 [INFO] Target Web App doesn't exist. Creating a new one...
 [INFO] Creating App Service Plan 'ServicePlanb6ba8178-5bbb-49e7'...
