@@ -92,9 +92,9 @@
             <plugin>
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-webapp-maven-plugin</artifactId>
-                <version>1.6.0</version>
+                <version>1.8.0</version>
                 <configuration>
-                    <deploymentType>jar</deploymentType>
+                    <schemaVersion>v2</schemaVersion>
 
                     <!-- Web App information -->
                     <resourceGroup>${RESOURCEGROUP_NAME}</resourceGroup>
@@ -102,13 +102,27 @@
                     <region>${REGION}</region>
 
                     <!-- Java Runtime Stack for Web App on Linux-->
-                    <linuxRuntime>jre8</linuxRuntime>
+                    <runtime>
+                         <os>linux</os>
+                         <javaVersion>jre8</javaVersion>
+                         <webContainer>jre8</webContainer>
+                     </runtime>
+                     <deployment>
+                         <resources>
+                         <resource>
+                             <directory>${project.basedir}/target</directory>
+                             <includes>
+                             <include>*.jar</include>
+                             </includes>
+                         </resource>
+                         </resources>
+                     </deployment>
 
                     <appSettings>
                         <property>
                             <name>COSMOSDB_URI</name>
                             <value>${COSMOSDB_URI}</value>
-                        </property>
+                        </property> 
                         <property>
                             <name>COSMOSDB_KEY</name>
                             <value>${COSMOSDB_KEY}</value>
